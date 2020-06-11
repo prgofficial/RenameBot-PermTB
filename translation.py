@@ -16,7 +16,7 @@ class Translation(object):
     SAVED_CUSTOM_THUMB_NAIL = "Custom thumbnail Saved ✅ This Is Permanent ᕙ(  • ‿ •  )ᕗ "
     DEL_ETED_CUSTOM_THUMB_NAIL = "Custom thumbnail cleared succesfully🤦"
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "Media cleared succesfully."
-    SAVED_RECVD_DOC_FILE = "File Downloaded Successfully😎"
+    SAVED_RECVD_DOC_FILE = "File Downloaded Successfully 😎"
     CUSTOM_CAPTION_UL_FILE = " "
     NO_CUSTOM_THUMB_NAIL_FOUND = "No Custom ThumbNail found,SED🤒"
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
