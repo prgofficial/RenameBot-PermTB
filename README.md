@@ -1,6 +1,7 @@
 ## Rename Bot 
 
-Open Source Rename Telegram RoBot
+An Open Source Telegram Rename Bot
+
 ---
 👺 Rename any Telegram Files with Permanent Thumbnail Support
 
