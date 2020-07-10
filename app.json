@@ -1,6 +1,6 @@
 {
-  "name": "Rename Bot",
-  "description": "Telegram's best Open Source Rename Bot(Added permanent thumbnail support.",
+  "name": "TG Rename Bot",
+  "description": "Telegram's best Open Source Rename Bot. Create your Fork now.",
   "keywords": [
     "telegram",
     "best",
@@ -8,8 +8,9 @@
     "source",
     "Rename"
   ],
-  "success_url": "https://telegram.dog/AnyDLBot",
-  "repository": "https://github.com/prgofficial/RenameBot-PermTB",
+  "success_url": "https://telegram.dog/AID_3N",
+  "website": "https://github.com/AID-3N",
+  "repository": "https://github.com/Aid-3n/Rename-TG-BOT",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -33,7 +34,7 @@
     },
     "AUTH_USERS": {
       "description": "allow only pre-defined users to use this bot",
-      "value": "680815375 982168839"
+      "value": ""
     },
     "BANNED_USERS": {
       "description": "Banned Unwanted members..",
@@ -47,6 +48,12 @@
     }
   },
   "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
   ],
   "buildpacks": [{
     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
