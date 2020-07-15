@@ -8,9 +8,9 @@
     "source",
     "Rename"
   ],
-  "success_url": "https://telegram.dog/AID_3N",
-  "website": "https://github.com/AID-3N",
-  "repository": "https://github.com/Aid-3n/Rename-TG-BOT",
+  "success_url": "https://github.com/aid-3n",
+  "website": "https://githib.com/prgofficial",
+  "repository": "https://github.com/prgofficial/RenameBot-PermTB",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
