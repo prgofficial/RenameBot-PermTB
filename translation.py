@@ -13,7 +13,7 @@ class Translation(object):
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds.\nUploaded in {} seconds"
     NOT_AUTH_USER_TEXT = "CONTACT @prgofficial"
     NOT_AUTH_USER_TEXT_FILE_SIZE = "IF You Got This Message You Should Contact @prgofficial"
-    SAVED_CUSTOM_THUMB_NAIL = "Custom thumbnail Saved ✅ This Is Permanent ᕙ(  • ‿ •  )ᕗ "
+    SAVED_CUSTOM_THUMB_NAIL = "Thumbnail Saved ✅ This Is Permanent"
     DEL_ETED_CUSTOM_THUMB_NAIL = "Custom thumbnail cleared succesfully🤦"
     FF_MPEG_DEL_ETED_CUSTOM_MEDIA = "Media cleared succesfully."
     SAVED_RECVD_DOC_FILE = "File Downloaded Successfully 😎"
