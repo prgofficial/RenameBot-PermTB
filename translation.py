@@ -9,7 +9,7 @@ class Translation(object):
     DOWNLOAD_START = "Give Me Some Time Bruh!!(〒﹏〒)"
     UPLOAD_START = "Hurray... Completed Downloading(;ŏ﹏ŏ)"
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry WTF Do You Think! I'll Upload It?"
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "**Thank you for Using Me JOin > @moviesonlydiscussion ❤️**"
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "**Thank you for Using Me > ©  @prgofficial **"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds.\nUploaded in {} seconds"
     NOT_AUTH_USER_TEXT = "CONTACT @prgofficial"
     NOT_AUTH_USER_TEXT_FILE_SIZE = "IF You Got This Message You Should Contact @prgofficial"
