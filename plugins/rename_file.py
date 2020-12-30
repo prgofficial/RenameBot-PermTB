@@ -67,7 +67,7 @@ async def rename_doc(bot, message):
         splitit = actualname.split(".")
         extension = (splitit[-1])
     except:
-        extension = mkv
+        extension = "mkv"
 
     await bot.delete_messages(
         chat_id=message.chat.id,
