@@ -75,7 +75,7 @@ async def rename_doc(bot, message):
         revoke=True
     )
     
-    if message.from_user.id not in Config.BANNED_USERS:
+    if message.from_user.id not in Config.AUTH_USERS:
         file_name = message.text
         description = script.CUSTOM_CAPTION_UL_FILE.format(newname=file_name)
         download_location = Config.DOWNLOAD_LOCATION + "/"
