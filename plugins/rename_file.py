@@ -79,13 +79,6 @@ async def rename_doc(bot, message):
         file_name = message.text
         description = script.CUSTOM_CAPTION_UL_FILE.format(newname=file_name)
         download_location = Config.DOWNLOAD_LOCATION + "/"
-        thumb_image_path = download_location + str(message.from_user.id) + ".jpg"
-        if not os.path.exists(thumb_image_path):
-            mes = await thumb(message.from_user.id)
-            if mes != None:
-                m = await bot.get_messages(message.chat.id, mes.msg_id)
-                await m.download(file_name=thumb_image_path)
-                thumb_image_path = thumb_image_path
 
         a = await bot.send_message(
             chat_id=message.chat.id,
@@ -120,7 +113,16 @@ async def rename_doc(bot, message):
                 )
             # logger.info(the_real_download_location)
 
-            if os.path.exists(thumb_image_path):
+            thumb_image_path = download_location + str(message.from_user.id) + ".jpg"
+            if not os.path.exists(thumb_image_path):
+                mes = await thumb(message.from_user.id)
+                if mes != None:
+                    m = await bot.get_messages(message.chat.id, mes.msg_id)
+                    await m.download(file_name=thumb_image_path)
+                    thumb_image_path = thumb_image_path
+                else:
+                    thumb_image_path = None                    
+            else:
                 width = 0
                 height = 0
                 metadata = extractMetadata(createParser(thumb_image_path))
@@ -132,8 +134,6 @@ async def rename_doc(bot, message):
                 img = Image.open(thumb_image_path)
                 img.resize((320, height))
                 img.save(thumb_image_path, "JPEG")
-            else:
-                thumb_image_path = None
 
             c_time = time.time()
             await bot.send_document(
