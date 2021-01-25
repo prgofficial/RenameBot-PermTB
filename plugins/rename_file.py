@@ -162,7 +162,6 @@ async def rename_doc(bot, message):
 
             await bot.edit_message_text(
                 text=script.AFTER_SUCCESSFUL_UPLOAD_MSG,
-                reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="🙌🏻 SHARE ME 🙌🏻", url="tg://msg?text=Hai%20Friend%20%E2%9D%A4%EF%B8%8F%2C%0AToday%20i%20just%20found%20out%20an%20intresting%20and%20Powerful%20%2A%2ARename%20Bot%2A%2A%20for%20Free%F0%9F%A5%B0.%20%0A%2A%2ABot%20Link%20%3A%2A%2A%20%40TroJanzRenamer%20%F0%9F%94%A5")]]),
                 chat_id=message.chat.id,
                 message_id=a.message_id,
                 disable_web_page_preview=True
