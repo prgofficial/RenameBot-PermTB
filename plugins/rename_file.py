@@ -80,7 +80,7 @@ async def rename_doc(bot, message):
         description = script.CUSTOM_CAPTION_UL_FILE.format(newname=file_name)
         download_location = Config.DOWNLOAD_LOCATION + "/"
 
-        a = await bot.send_message(
+        sendmsg = await bot.send_message(
             chat_id=message.chat.id,
             text=script.DOWNLOAD_START,
             reply_to_message_id=message.message_id
@@ -93,24 +93,32 @@ async def rename_doc(bot, message):
             progress=progress_for_pyrogram,
             progress_args=(
                 script.DOWNLOAD_START,
-                a,
+                sendmsg,
                 c_time
             )
         )
         if the_real_download_location is not None:
-            await bot.edit_message_text(
-                text=script.SAVED_RECVD_DOC_FILE,
-                chat_id=message.chat.id,
-                message_id=a.message_id
-            )
+            try:
+                await bot.edit_message_text(
+                    text=script.SAVED_RECVD_DOC_FILE,
+                    chat_id=message.chat.id,
+                    message_id=sendmsg.message_id
+                )
+            except:
+                await sendmsg.delete()
+                sendmsg = await message.reply_text(script.SAVED_RECVD_DOC_FILE, quote=True)
 
             new_file_name = download_location + file_name + "." + extension
             os.rename(the_real_download_location, new_file_name)
-            await bot.edit_message_text(
-                text=script.UPLOAD_START,
-                chat_id=message.chat.id,
-                message_id=a.message_id
-                )
+            try:
+                await bot.edit_message_text(
+                    text=script.UPLOAD_START,
+                    chat_id=message.chat.id,
+                    message_id=sendmsg.message_id
+                    )
+            except:
+                await sendmsg.delete()
+                sendmsg = await message.reply_text(script.UPLOAD_START, quote=True)
             # logger.info(the_real_download_location)
 
             thumb_image_path = download_location + str(message.from_user.id) + ".jpg"
@@ -146,7 +154,7 @@ async def rename_doc(bot, message):
                 progress=progress_for_pyrogram,
                 progress_args=(
                     script.UPLOAD_START,
-                    a, 
+                    sendmsg, 
                     c_time
                 )
             )
@@ -159,14 +167,17 @@ async def rename_doc(bot, message):
                 os.remove(thumb_image_path)
             except:
                 pass  
-
-            await bot.edit_message_text(
-                text=script.AFTER_SUCCESSFUL_UPLOAD_MSG,
-                chat_id=message.chat.id,
-                message_id=a.message_id,
-                disable_web_page_preview=True
-            )
-            
+            try:
+                await bot.edit_message_text(
+                    text=script.AFTER_SUCCESSFUL_UPLOAD_MSG,
+                    chat_id=message.chat.id,
+                    message_id=sendmsg.message_id,
+                    disable_web_page_preview=True
+                )
+            except:
+                await sendmsg.delete()
+                await message.reply_text(script.AFTER_SUCCESSFUL_UPLOAD_MSG, quote=True)
+                
     else:
         await bot.send_message(
             chat_id=message.chat.id,
