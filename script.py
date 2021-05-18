@@ -1,3 +1,6 @@
+import os
+from config import Config
+
 class script(object):
     START_TEXT = """ A Simple File Renamer Bot With Permanent Thumbnail support!💯
 
@@ -13,6 +16,7 @@ class script(object):
     NO_THUMB = "No thumbnails found!"
     SAVED_RECVD_DOC_FILE = "File Downloaded Successfully 😎"
     CUSTOM_CAPTION_UL_FILE = " "
+    CAPTION = "<b>{}</b>\n\n" + str(Config.CAPTION)
     HELP_USER = """It's not that complicated😅
     
 1. Send me any Telegram File.
