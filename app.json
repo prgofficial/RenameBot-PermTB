@@ -28,6 +28,10 @@
       "description": "Get this value from https://my.telegram.org",
       "value": ""
     },
+    "CAPTION": {
+      "description": "If you want to add a caption to renamed file, enter it here",
+      "required": false
+    },
     "AUTH_USERS": {
       "description": "allow only pre-defined users to use this bot",
       "value": ""
