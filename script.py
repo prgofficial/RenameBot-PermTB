@@ -16,7 +16,7 @@ class script(object):
     NO_THUMB = "No thumbnails found!"
     SAVED_RECVD_DOC_FILE = "File Downloaded Successfully 😎"
     CUSTOM_CAPTION_UL_FILE = " "
-    CAPTION = "<b>{}</b>\n\n" + str(Config.CAPTION)
+    CAPTION = "**{}**\n\n" + str(Config.CAPTION)
     HELP_USER = """It's not that complicated😅
     
 1. Send me any Telegram File.
