@@ -1,5 +1,5 @@
 import os
-from config import Config
+from sample_config import Config
 
 class script(object):
     START_TEXT = """ A Simple File Renamer Bot With Permanent Thumbnail support!💯
